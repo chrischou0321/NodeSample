@@ -35,7 +35,8 @@ function upload(response, request) {
         fs.renameSync(files.upload.path, "./tmp/test.png");
         response.writeHead(200, {"Content-Type" : "text/html"});
         response.write("Received image:</br>");
-        response.write("<img src='/show' />");
+        response.write("<img src='/show' /></br>");
+        response.write("<a href='http://localhost:8888/start'><button>Redirect</button></a>");
         response.end();
     })
     
